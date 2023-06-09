@@ -77,39 +77,44 @@ public class NomesanasVieta : MonoBehaviour,
                                 objektuSkripts.skanasKoAtskanot[4]);
                             break;
 
-                        case "b2":
+                        case "cements":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[5]);
                             break;
 
-                        case "e46":
+                        case "b2":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[6]);
                             break;
 
-                        case "e61":
+                        case "e46":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[7]);
                             break;
 
-                        case "ekska":
+                        case "e61":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[8]);
                             break;
 
-                        case "policija":
+                        case "ekska":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[9]);
                             break;
 
-                        case "traktors":
+                        case "policija":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[10]);
                             break;
 
-                        case "traktors2":
+                        case "traktors":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[11]);
+                            break;
+
+                        case "traktors2":
+                            objektuSkripts.skanasAvots.PlayOneShot(
+                                objektuSkripts.skanasKoAtskanot[12]);
                             break;
 
                         default:
@@ -151,6 +156,13 @@ public class NomesanasVieta : MonoBehaviour,
                         break;
 
 
+                    case "cements":
+                        objektuSkripts.cementamasina.
+                         GetComponent<RectTransform>().localPosition =
+                         objektuSkripts.cementaKoord;
+                        break;
+
+
                     case "b2":
                         objektuSkripts.b2.
                          GetComponent<RectTransform>().localPosition =
@@ -186,14 +198,14 @@ public class NomesanasVieta : MonoBehaviour,
                         break;
 
 
-                    case "traktors":
+                    case "traktors1":
                         objektuSkripts.traktors.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.tKoord;
                         break;
 
 
-                    case "traktors2":
+                    case "traktors5":
                         objektuSkripts.traktors2.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.t2Koord;
