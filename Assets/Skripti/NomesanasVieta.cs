@@ -9,12 +9,13 @@ public class NomesanasVieta : MonoBehaviour,
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmStarpiba, yIzmStarpiba;
 	public Objekti objektuSkripts;
-    public bool[] vietā = new bool[11];
+    public bool[] vieta = new bool[12];
+
     public void OnDrop(PointerEventData eventData)
     {
 		if (eventData.pointerDrag != null)
 		{
-			if (eventData.pointerDrag.tag.Equals(tag))
+            if (eventData.pointerDrag.tag.Equals(tag))
 			{
 				vietasZRot =
 				eventData.pointerDrag.
@@ -60,73 +61,73 @@ public class NomesanasVieta : MonoBehaviour,
                         case "atkritumi":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[1]);
-                            vietā[0] = true;
+                            vieta[0] = true;
                             break;
 
                         case "atrie":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[2]);
-                            vietā[1] = true;
+                            vieta[1] = true;
                             break;
 
                         case "buss":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[3]);
-                            vietā[2] = true;
+                            vieta[2] = true;
                             break;
 
                         case "uguns":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[4]);
-                            vietā[3] = true;
+                            vieta[3] = true;
                             break;
 
                         case "cements":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[5]);
-                            vietā[4] = true;
+                            vieta[4] = true;
                             break;
 
                         case "b2":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[6]);
-                            vietā[5] = true;
+                            vieta[5] = true;
                             break;
 
                         case "e46":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[7]);
-                            vietā[6] = true;
+                            vieta[6] = true;
                             break;
 
                         case "e61":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[8]);
-                            vietā[7] = true;
+                            vieta[7] = true;
                             break;
 
                         case "eksk":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[9]);
-                            vietā[8] = true;
+                            vieta[8] = true;
                             break;
 
                         case "poli":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[10]);
-                            vietā[9] = true;
+                            vieta[9] = true;
                             break;
 
                         case "tr1":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[11]);
-                            vietā[10] = true;
+                            vieta[10] = true;
                             break;
 
                         case "tr2":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[12]);
-                            vietā[11] = true;
+                            vieta[11] = true;
                             break;
 
                         default:
@@ -232,4 +233,18 @@ public class NomesanasVieta : MonoBehaviour,
 		}
 		
 	}
+
+    bool visiIr()
+    {
+        for (int i = 0; i < vieta.Length; i++)
+        {
+            if (!vieta[i])
+            {
+                Debug.Log("Visi vietā!");
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

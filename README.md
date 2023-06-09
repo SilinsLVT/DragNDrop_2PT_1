@@ -10,3 +10,7 @@ Projekts "Drag N Drop", realizē automašīnu novietošanas spēli. Spēle pared
 - [x] Iespēja mainīt objekta izmēru pa x asi
 - [x] Iespēja mainīt objekta izmēru pa y asi
 - [x] Skaņas efekti
+- [x] Pievienoti vēl 9 transportlīdzekļi
+- [x] Katram jaunajam transportam pievienota sava skaņa
+- [ ] Uzvaras logs
+- [x] Sākuma aina
