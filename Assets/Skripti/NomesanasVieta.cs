@@ -9,7 +9,7 @@ public class NomesanasVieta : MonoBehaviour,
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmStarpiba, yIzmStarpiba;
 	public Objekti objektuSkripts;
-
+    public bool[] vietā = new bool[11];
     public void OnDrop(PointerEventData eventData)
     {
 		if (eventData.pointerDrag != null)
@@ -60,61 +60,73 @@ public class NomesanasVieta : MonoBehaviour,
                         case "atkritumi":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[1]);
+                            vietā[0] = true;
                             break;
 
                         case "atrie":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[2]);
+                            vietā[1] = true;
                             break;
 
                         case "buss":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[3]);
+                            vietā[2] = true;
                             break;
 
                         case "uguns":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[4]);
+                            vietā[3] = true;
                             break;
 
                         case "cements":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[5]);
+                            vietā[4] = true;
                             break;
 
                         case "b2":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[6]);
+                            vietā[5] = true;
                             break;
 
                         case "e46":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[7]);
+                            vietā[6] = true;
                             break;
 
                         case "e61":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[8]);
+                            vietā[7] = true;
                             break;
 
-                        case "ekska":
+                        case "eksk":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[9]);
+                            vietā[8] = true;
                             break;
 
-                        case "policija":
+                        case "poli":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[10]);
+                            vietā[9] = true;
                             break;
 
-                        case "traktors":
+                        case "tr1":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[11]);
+                            vietā[10] = true;
                             break;
 
-                        case "traktors2":
+                        case "tr2":
                             objektuSkripts.skanasAvots.PlayOneShot(
                                 objektuSkripts.skanasKoAtskanot[12]);
+                            vietā[11] = true;
                             break;
 
                         default:
@@ -184,28 +196,28 @@ public class NomesanasVieta : MonoBehaviour,
                         break;
 
 
-                    case "ekska":
+                    case "eksk":
                         objektuSkripts.ekskavators.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.eksKoord;
                         break;
 
 
-                    case "policija":
+                    case "poli":
                         objektuSkripts.policija.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.polKoord;
                         break;
 
 
-                    case "traktors1":
+                    case "tr1":
                         objektuSkripts.traktors.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.tKoord;
                         break;
 
 
-                    case "traktors5":
+                    case "tr2":
                         objektuSkripts.traktors2.
                          GetComponent<RectTransform>().localPosition =
                          objektuSkripts.t2Koord;
